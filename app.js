@@ -1,11 +1,9 @@
 import express from "express";
+import Hello from "./hello.js";
+import Lab5 from "./lab5.js";
 // create new express instance
 const app = express();
-app.get("/hello", (req, res) => {
-  res.send("Life is good!");
-});
-app.get("/", (req, res) => {
-  res.send("Welcome to Full Stack Development!");
-});
+Lab5(app);
+Hello(app);
 // listen to http://localhost:4000
 app.listen(4000);
