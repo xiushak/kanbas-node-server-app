@@ -9,7 +9,9 @@ import Lab5 from "./lab5.js";
 import ModuleRoutes from "./modules/routes.js";
 import UserRoutes from "./users/routes.js";
 
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect(
+  process.env.DB_CONNECTION_STRING || "mongodb://localhost:27017/kanbas"
+);
 // create new express instance
 const app = express();
 app.use(
